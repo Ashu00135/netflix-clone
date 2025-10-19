@@ -28,11 +28,17 @@ body {
     background-color: black;
 }
 nav{
-    align-items: flex-end;
     display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+    padding: 18px 24px;
 }
 nav .button{
-    justify-content: right;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
 }
 nav img{
     color: red;
@@ -83,25 +89,29 @@ nav button{
     z-index: 20;
 }
 .btn{
-    padding: 3px 8px;
-    font-weight: 400;
+    padding: 6px 12px;
+    font-weight: 500;
     color: white;
-    background-color:rgba(248, 243, 243, 0.021);
-    border-radius: 4px;
+    background-color: rgba(248, 243, 243, 0.06);
+    border-radius: 8px;
     border: 1px solid white;
     cursor: pointer;
+    font-size: 14px;
 }
 .btn-red{
-    background-color: red ;
+    background-color: red;
     color: white;
-    padding: 3px 24px;
-    font-size: 20px;
-    border-radius: 4px;
-    font-weight: 400;
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: 600;
 }
 .btn-red-sm{
     background-color: red;
     color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 16px;
 }
 .hero-btn{
     display: flex;
@@ -110,12 +120,13 @@ nav button{
     gap: 16px;
 }
 .main input{
-    padding: 7px 101px 8px 14px;
+    padding: 10px 14px;
     color: white;
-    font-size: 12px;
-    border-radius: 4px;
+    font-size: 14px;
+    border-radius: 8px;
     background-color: rgba(23, 23, 23, 0.7);
     border:  1px solid rgba(246, 238, 238, 0.5);
+    min-width: 260px;
 }
 .first{
     display: flex;
@@ -319,6 +330,19 @@ section.first>div :nth-child(2) {
     cursor: pointer;
 }
 
+/* FAQ answers are hidden by default and shown when open */
+.faq-answer {
+    display: none;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.4;
+    padding-top: 12px;
+}
+
+.faqbox.open .faq-answer {
+    display: block;
+}
+
 footer {
     color: white;
     max-width: 60vw;
@@ -415,4 +439,10 @@ footer .questions {
     display: flex;
     flex-direction: column;
     gap: 23px;
+}
+.email-message{
+    color: #ffb3b3;
+    font-size: 14px;
+    margin-top: 8px;
+    text-align: center;
 }
